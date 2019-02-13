@@ -9,3 +9,10 @@ def dinner(request):
     menus = ['chicken', 'shakeshack', 'inandout']
     pick = random.choice(menus)
     return render(request, 'dinner.html', {'menus':menus, 'pick':pick})
+    
+def hello(request, name):
+    return render(request, 'hello.html', {'name':name})
+    
+def cube(request, num):
+    cubenum = int(num)**3
+    return render(request, 'cube.html', {'num':num, 'cubenum':cubenum})
