@@ -1,0 +1,13 @@
+{% extends 'base.html' %} <!-- extends는 무조건 최상단 -->
+
+{% load static %}
+
+{% block title %}STATIC{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+{% endblock %}
+    
+{% block body %}
+    <img src="{% static 'dog.png' %}" alt='image'></img>
+{% endblock %}
